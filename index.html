@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p>
+        Como declarar os Arrays ? 
+        <h4 id="declarationOfArrays"> 
+        </h4>
+    </p>
+<hr>
+    <p>
+        Como buscar o primeiro elemento do Array ?
+        <h4 id="accessFirstElement"> 
+        </h4>
+    </p>
+<hr>
+    <p>
+        Como buscar o segundo elemento do Array ?
+        <h4 id="accessSecondElement"> 
+        </h4>
+    </p>
+<hr>
+    <p>
+        Como buscar o terceiro elemento do Array ?
+        <h4 id="accessThirdElement"> 
+        </h4>
+    </p>
+<hr>
+    <p>
+        Como obter o comprimento do Array ?
+        <h4 id="displayLengthOfArray"> 
+        </h4>
+    </p>
+<hr>
+    <p>
+        Como utilizar o loop através do Array ?
+        <h4 id="loopTheArray"> 
+        </h4>
+    </p>
+<hr>
+    <p>
+        Como adicionar o elemento ao final do Array ?
+        <h4 id="addElementAtTheEndOfArray"> 
+        </h4>
+    </p>
+<hr>
+    <p>
+        Como adicionar mais elementos ao final do Array ?
+        <h4 id="addMoreElementAtTheEndOfArray"> 
+        </h4>
+    </p>
+<hr>
+    <p>
+        Como declarar o array com letras do alfabeto ? 
+        <h4 id="displayAlphabetsArray"> 
+        </h4>
+    </p>
+<hr>
+    <p>
+        Como organizar o array com o alfabeto ? 
+        <h4 id="displaySortedAlphabetsArray"> 
+        </h4>
+    </p>
+<hr>
+    <p>
+        Como reverter o array com o alfabeto ? 
+        <h4 id="displayReverseArray"> 
+        </h4>
+    </p>
+<hr>      
+    <p>
+        Como declarar o array com números ? 
+        <h4 id="displayNumberArray"> 
+        </h4>
+    </p>
+<hr>
+    <p>
+        Como encontar o número máximo de um array ? 
+        <h4 id="displayMaximumNumber"> 
+        </h4>
+    </p>
+<hr>
+    <p>
+        Como encontrar o número mínimo de um array ? 
+        <h4 id="displayMinimumNumber"> 
+        </h4>
+    </p>
+
+    <h3 style="background-color: red; font-size: 23px;">
+        ATIVIDADE ADICIONAL
+    </h3>
+    <p>
+        Como adicionar elementos ao início do array ? Dica utilize o método unshift
+        <h4 id="addElementAtTheStartOfArray"> 
+        </h4>
+    </p>
+<hr>
+    <p>
+        Como adicionar mais elementos ao início do array ? Dica utilize o método unshift
+        <h4 id="addMoreElementAtTheStartOfArray"> 
+        </h4>
+    </p>
+<hr>
+    <p>
+        Como remover um elemento do início do array ? Dica utilize o método shift
+        <h4 id="removeElementFromStartOfArray"> 
+        </h4>
+    </p>
+<hr>
+    <p>
+        Como remover um elemento do final do array ? Dica utilize o método pop
+        <h4 id="removeElementFromEndOfArray"> 
+        </h4>
+    </p>
+<hr>
+    <p>
+        Como unir dois arrays ? Dica defina dois arrays e, então, utilize o método concat ex.:- array1.concat(array2)
+        <h4 id="mergeTwoArrays"> 
+        </h4>
+    </p>
+    <script>
+    var fruits = ["Maçã", "Laranja", "Manga"];
+    console.log(fruits);
+    document.getElementById("declarationOfArrays").innerHTML = fruits;
+
+    //Como buscar o primeiro element (elemento) de um array?
+    console.log(fruits[0]);
+    document.getElementById("accessFirstElement").innerHTML = fruits[0];
+
+    //Como buscar o segundo element do array?
+    document.getElementById("accessSecondElement").innerHTML = fruits[1];
+
+    //terceiro?
+    document.getElementById("accessThirdElement").innerHTML = fruits[2];
+
+    //comprimento?
+    document.getElementById("displayLengthOfArray").innerHTML = fruits.length;
+    
+    //Como utilizar o loop através do array?
+    var cont = "";
+    for (i = 0; i < fruits.length; i++){
+        console.log(fruits[i]);
+        cont = cont + fruits[i] + "<br>";
+    }
+    document.getElementById("loopTheArray").innerHTML = cont;
+
+    //adicionar um elemento ao array
+    fruits.push("Limão");
+    document.getElementById("addElementAtTheEndOfArray").innerHTML = fruits;
+    
+    //adicionar mais um elemento
+    fruits.push("Cereja");
+    document.getElementById("addMoreElementAtTheEndOfArray").innerHTML = fruits;
+
+    //declarar array alfabeto
+    var alfabeto = ["h","b","k", "d", "q","a", "y", "c"];
+    document.getElementById("displayAlphabetsArray").innerHTML = alfabeto;
+
+    //ordene o array
+    alfabeto.sort();
+    document.getElementById("displaySortedAlphabetsArray").innerHTML = alfabeto;
+
+    //inverta o array
+    alfabeto.reverse();
+    document.getElementById("displayReverseArray").innerHTML = alfabeto;
+
+    //Como declarar o array com números?
+    var numeros = [45, 9, 15, 30, 4];
+    document.getElementById("displayNumberArray").innerHTML = alfabeto;
+    
+    //como encontrar o máximo.
+    var maxinum = Math.max.apply(Math, numeros);
+    document.getElementById("displayMaximumNumber").innerHTML = maxinum;
+
+    //encontre o numero minimo
+    var minnum = Math.min.apply(Math, numeros);
+    document.getElementById("displayMinimumNumber").innerHTML = minnum;
+
+    //Como adicionar elementos ao início do array ? Dica utilize o método unshift
+    fruits.unshift("Morango");
+    document.getElementById("addElementAtTheStartOfArray").innerHTML = fruits;
+
+    //Como adicionar mais elementos ao início do array ? Dica utilize o método unshift
+    fruits.unshift("Melancia");
+    document.getElementById("addMoreElementAtTheStartOfArray").innerHTML = fruits;
+
+    //Como remover um elemento do início do array ? Dica utilize o método shift
+    fruits.shift();
+    document.getElementById("removeElementFromStartOfArray").innerHTML = fruits;
+
+    //Como remover um elemento do final do array ? Dica utilize o método pop
+    fruits.pop();
+    document.getElementById("removeElementFromEndOfArray").innerHTML = fruits;
+
+    //Como unir dois arrays ? Dica defina dois arrays e, então, utilize o método concat ex.:- array1.concat(array2)
+    var array1 = ["Boruto", "Dragon Ball Z", "One Piece"];
+    var array2 = ["Sakura", "Mew mew power", "Sailor Moon"];
+    var juncao = array1.concat(array2);
+
+    document.getElementById("mergeTwoArrays").innerHTML = juncao;
+    </script>
+</body>
+</html>
